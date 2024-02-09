@@ -121,8 +121,6 @@ def load_google(split, max_len=None):
     sent = []
     mask = []
     for i in range(len(df)):
-        if i>3:
-            break
         if max_len is None or len(df['text'][i]) <= max_len:
             sent.append(df['text'][i])
             lang.add_sentence(df['text'][i])
